@@ -161,3 +161,12 @@ services:
    networks:
      - guacnetwork_compose
 ####################################################################################
+
+  ubuntu_vnc:
+    image: accetto/ubuntu-vnc-xfce
+    restart: unless-stopped
+    ports:
+     - 5900:5900
+     - 5901:5901
+    networks:
+      - guacnetwork_compose
